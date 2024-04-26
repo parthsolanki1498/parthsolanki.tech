@@ -25,6 +25,18 @@ export function slideInFromLeft(delay: number) {
       },
     };
   }
+
+  export const profileAnimation = {
+    hidden: { y: -100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+        duration: 0.5,
+      },
+    },
+  }
   
   export const slideInFromTop = {
     hidden: { y: -100, opacity: 0 },
@@ -36,4 +48,4 @@ export function slideInFromLeft(delay: number) {
         duration: 0.5,
       },
     },
-  };
+};
