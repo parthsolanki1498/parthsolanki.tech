@@ -1,8 +1,16 @@
-import Encryption from "@/components/main/Encryption";
 import Hero from "@/components/main/Hero";
 import Projects from "@/components/main/Projects";
 import Skills from "@/components/main/Skills";
-import Image from "next/image";
+import styles from './page.module.scss';
+import dynamic from "next/dynamic";
+import Experience from '@/components/experience';
+import SmoothScroll from "@/components/sub/SmoothScroll";
+
+
+const Earth = dynamic(() => import('@/components/earth'), {
+  ssr: false,
+  loading: () => <img src="/placeholder.png"></img>
+})
 
 export default function Home() {
   return (
@@ -10,7 +18,15 @@ export default function Home() {
       <div className='flex flex-col gap-20'>
         <Hero />
         <Skills />
-        <Encryption />
+        {/* <Encryption /> */}
+        {/* <SmoothScroll> */}
+        <main className={styles.main}>
+        {/* <Experience/> */}
+        <Earth />
+        <Experience />
+        {/* <ExperienceList /> */}
+        </main>
+        {/* </SmoothScroll> */}
         <Projects />
       </div>
       

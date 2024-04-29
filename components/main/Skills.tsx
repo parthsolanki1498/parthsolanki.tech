@@ -13,7 +13,7 @@ const Skills = () => {
             <SkillText />
 
             <div className='flex flex-row justify-around flex-wrap mt-4 gap-5 items-center'>
-                {Skill_data.map((image, index) => (
+                {Backend_skill.map((image, index) => (
                     <SkillDataProvider
                     key={index}
                     src={image.Image}
@@ -35,7 +35,7 @@ const Skills = () => {
             </div>
 
             <div className='flex flex-row justify-around flex-wrap mt-4 gap-5 items-center'>
-                {Backend_skill.map((image, index) => (
+                {Skill_data.map((image, index) => (
                     <SkillDataProvider
                     key={index}
                     src={image.Image}
@@ -80,6 +80,9 @@ const Skills = () => {
                 </div>
             </div>
 
+            <div className='text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 font-bold text-6xl pt-20'>
+                Experience
+            </div>
     </section>
   )
 }
