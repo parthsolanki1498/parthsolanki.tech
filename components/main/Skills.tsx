@@ -80,7 +80,7 @@ const Skills = () => {
                 </div>
             </div>
 
-            <div className='text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 font-bold text-6xl pt-20'>
+            <div className='text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 font-bold text-6xl mt-10'>
                 Experience
             </div>
     </section>

@@ -46,7 +46,7 @@ const data = [
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
   return (
-    <div className={styles.container}>
+    <div id='experience' className={styles.container}>
       <Titles data={data} setSelectedProject={setSelectedProject} />
       <Descriptions data={data} selectedProject={selectedProject} />
     </div>

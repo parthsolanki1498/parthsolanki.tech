@@ -1,13 +1,13 @@
 .main{
     height: 60vw;
     // background-color: #0f0f0f;
-    margin-top: 0vh;
+    margin-top: -150px;
     margin-bottom: 0vh;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    overflow: visible;
     img{
         height: 100%;
     }
