@@ -1,0 +1,105 @@
+/* Base Styles */
+.body {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  transform-style: preserve-3d;
+  margin-top: -63px;
+  margin-left: 175px;
+}
+
+.textContainer {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+
+.textContainer p {
+  position: relative;
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0px;
+  transition: all 0.4s;
+  color: white;
+  line-height: 4rem;
+}
+
+.textContainer .secondary {
+  transform: rotateX(-90deg) translateY(1.75rem);
+  transform-origin: bottom center;
+  position: absolute;
+  top: 0;
+  color: #6c2bcd;
+  opacity: 0;
+}
+
+.textContainer:hover {
+  transform: rotateX(90deg);
+  margin-top: 8px;
+}
+
+.textContainer:hover .secondary {
+  opacity: 1;
+}
+
+.textContainer:hover .primary {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* Media Queries for Mobile */
+
+/* Screens up to 768px */
+@media (max-width: 768px) {
+  .body {
+    margin-top: 0;
+    margin-left: 0;
+    position: static;
+    align-items: center;
+  }
+
+  .textContainer {
+    transform: none;
+    cursor: default;
+  }
+
+  .textContainer p {
+    font-size: 1.5rem; /* Simplified font size for mobile */
+    line-height: 2rem;
+    text-align: center;
+    color: rgb(255, 255, 255); /* Change to simple black text */
+  }
+
+  .textContainer .secondary {
+    display: none; /* Hide secondary text on mobile */
+  }
+
+  .textContainer:hover {
+    transform: none;
+  }
+
+  .Welcome-box {
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    background-color: transparent; /* Remove unnecessary styles */
+    border: none;
+  }
+
+  .profile {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/* Screens up to 480px */
+@media (max-width: 480px) {
+  .textContainer p {
+    font-size: 1.25rem; /* Further simplify font size */
+    line-height: 1.75rem;
+  }
+
+  .Welcome-box {
+    font-size: 0.75rem;
+  }
+}

@@ -5,6 +5,7 @@ import styles from './page.module.scss';
 import dynamic from "next/dynamic";
 import Experience from '@/components/experience';
 import SmoothScroll from "@/components/sub/SmoothScroll";
+import CompetitiveProgramming from "@/components/main/CompetitiveProgramming";
 
 
 const Earth = dynamic(() => import('@/components/earth'), {
@@ -18,15 +19,11 @@ export default function Home() {
       <div className='flex flex-col gap-20'>
         <Hero />
         <Skills />
-        {/* <Encryption /> */}
-        {/* <SmoothScroll> */}
         <main className={styles.main}>
-        {/* <Experience/> */}
         <Earth />
         <Experience />
-        {/* <ExperienceList /> */}
         </main>
-        {/* </SmoothScroll> */}
+        <CompetitiveProgramming />
         <Projects />
       </div>
       

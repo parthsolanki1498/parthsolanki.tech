@@ -19,12 +19,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Add the viewport meta tag here */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}>
         <StarsCanvas />
         <Navbar />
         {children}
         <Footer />
-        </body>
+      </body>
     </html>
   );
 }

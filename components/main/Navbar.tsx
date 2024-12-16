@@ -1,58 +1,116 @@
-import { Socials } from '@/constants'
-import Image from 'next/image'
-import React from 'react'
+"use client";
+
+import { Socials } from '@/constants';
+import Image from 'next/image';
+import React, { useState } from 'react';
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div className='w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#030014167] backdrop-blur-md z-50 px-10'>
-        <div className='w-full h-full flex flex-row items-center justify-between m-auto px-[10px]'>
-            <a href='#about-me' className='h-auto w-auto flex flex-row items-center'>
-                <Image
-                    src="/NavLogo.png"
-                    alt="logo"
-                    width={70}
-                    height={70}
-                    className='cursor-pointer hover:animate-slowspin' />
-                
-                <span className='font-bold ml-[10px] hidden md:block text-gray-300'>
-                    Parth Solanki
-                </span>
+    <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#030014167] backdrop-blur-md z-50 px-5 md:px-10">
+      <div className="w-full h-full flex items-center justify-between m-auto">
+        {/* Logo Section */}
+        <a href="#about-me" className="flex items-center">
+          <Image
+            src="/NavLogo.png"
+            alt="logo"
+            width={50}
+            height={50}
+            className="cursor-pointer hover:animate-slowspin"
+          />
+          <span className="font-bold ml-2 hidden md:block text-gray-300">
+            Parth Solanki
+          </span>
+        </a>
+
+        {/* Desktop Navigation Links */}
+        <div className="hidden md:flex w-[500px] items-center justify-between">
+          <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] px-5 py-2 rounded-full text-gray-200">
+            <a href="#about-me" className="cursor-pointer">
+              About Me
             </a>
+            <a href="#skills" className="cursor-pointer">
+              Skills
+            </a>
+            <a href="#experience" className="cursor-pointer">
+              Experience
+            </a>
+            <a href="#projects" className="cursor-pointer">
+              Projects
+            </a>
+          </div>
+        </div>
 
-            <div className='w-[500px] h-full flex flex-row items-center justify-between md:mr-20'>
-                <div className='flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200'>
-                    <a href='#about-me' className='cursor-pointer'>
-                        About Me
-                    </a>
+        {/* Mobile Menu Button */}
+        <button
+          className="block md:hidden focus:outline-none"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <Image
+            src="/menu-icon.png" // Replace with your menu icon
+            alt="menu"
+            width={30}
+            height={30}
+          />
+        </button>
 
-                    <a href='#skills' className='cursor-pointer'>
-                        Skills
-                    </a>
+        {/* Social Media Icons */}
+        <div className="hidden md:flex flex-row gap-5">
+          {Socials.map((social) => (
+            <Image
+              src={social.src}
+              alt={social.name}
+              key={social.name}
+              width={24}
+              height={24}
+            />
+          ))}
+        </div>
+      </div>
 
-                    <a href='#experience' className='cursor-pointer'>
-                        Experience
-                    </a>
-
-                    <a href='#projects' className='cursor-pointer'>
-                        Projects
-                    </a>
-                </div>
-            </div>
-
-            <div className='flex flex-row gap-5'>
-                {Socials.map((social) => (
-                    <Image
-                        src={social.src}
-                        alt={social.name}
-                        key={social.name}
-                        width={24}
-                        height={24}
-                    />
-                ))}
-            </div>
-        </div>  
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="flex flex-col md:hidden bg-[#030014] text-gray-200 p-5 rounded-lg mt-2 shadow-md">
+          <a
+            href="#about-me"
+            className="py-2"
+            onClick={() => setMenuOpen(false)}
+          >
+            About Me
+          </a>
+          <a href="#skills" className="py-2" onClick={() => setMenuOpen(false)}>
+            Skills
+          </a>
+          <a
+            href="#experience"
+            className="py-2"
+            onClick={() => setMenuOpen(false)}
+          >
+            Experience
+          </a>
+          <a
+            href="#projects"
+            className="py-2"
+            onClick={() => setMenuOpen(false)}
+          >
+            Projects
+          </a>
+          <div className="flex flex-row gap-5 mt-4">
+            {Socials.map((social) => (
+              <Image
+                src={social.src}
+                alt={social.name}
+                key={social.name}
+                width={24}
+                height={24}
+              />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
