@@ -23,7 +23,7 @@ export default function Home() {
         <Earth />
         <Experience />
         </main>
-        <CompetitiveProgramming />
+        {/* <CompetitiveProgramming /> */}
         <Projects />
       </div>
       

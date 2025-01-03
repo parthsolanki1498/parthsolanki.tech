@@ -11,7 +11,7 @@ export default function index({data, selectedProject}) {
         <div className={styles.descriptions}>
             {
                 data.map( (project, i) => {
-                    const { title, description } = project;
+                    const { title, description, url } = project;
                     return (
                     <div 
                         key={i} 

@@ -32,7 +32,7 @@ const HeroContent = () => {
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-4 w-4 md:h-5 md:w-5 "  />
           <h1 className="Welcome-text text-[11px] md:text-[13px]">
-            Fullstack Developer Portfolio
+            Welcome to my profile
           </h1>
         </motion.div>
 
@@ -75,6 +75,7 @@ const HeroContent = () => {
           gap and become a cosmic fullstack explorer.
         </motion.p>
         <motion.a
+        href="/parth_solanki_resume.pdf"
           variants={slideInFromLeft(1)}
           className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[150px] md:max-w-[200px] text-sm md:text-base"
         >

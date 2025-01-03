@@ -3,7 +3,6 @@ import {
   Frontend_skill,
   Full_stack,
   Other_skill,
-  Skill_data,
 } from "@/constants";
 import React from "react";
 import SkillDataProvider from "../sub/SkillDataProvider";
@@ -13,90 +12,98 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-0 py-20"
-      style={{ transform: "scale(0.9)" }}
+      className="flex flex-col h-screen w-full relative overflow-hidden"
     >
+      {/* Section Intro */}
       <SkillText />
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Backend_skill.map((image, index) => (
-          <SkillDataProvider
-            key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
-          />
-        ))}
-      </div>
+      {/* Skills Sections */}
+      <div className="flex flex-col flex-grow">
+        {/* Backend Skills */}
+        <div className="flex flex-col h-1/4 items-center justify-center ">
+          <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mb-3">
+            Backend Skills
+          </h2>
+          <div className="flex flex-row justify-center flex-wrap gap-3 items-center">
+            {Backend_skill.map((image, index) => (
+              <SkillDataProvider
+                key={index}
+                src={image.Image}
+                width={image.width}
+                height={image.height}
+                index={index}
+              />
+            ))}
+          </div>
+        </div>
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Frontend_skill.map((image, index) => (
-          <SkillDataProvider
-            key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
-          />
-        ))}
-      </div>
+        {/* Frontend Skills */}
+        <div className="flex flex-col h-1/4 items-center justify-center">
+          <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500 mb-3">
+            Frontend Skills
+          </h2>
+          <div className="flex flex-row justify-center flex-wrap gap-3 items-center">
+            {Frontend_skill.map((image, index) => (
+              <SkillDataProvider
+                key={index}
+                src={image.Image}
+                width={image.width}
+                height={image.height}
+                index={index}
+              />
+            ))}
+          </div>
+        </div>
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Skill_data.map((image, index) => (
-          <SkillDataProvider
-            key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
-          />
-        ))}
-      </div>
+        {/* Full-stack Skills */}
+        <div className="flex flex-col h-1/4 items-center justify-center">
+          <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500 mb-3">
+            Full-stack Skills
+          </h2>
+          <div className="flex flex-row justify-center flex-wrap gap-3 items-center">
+            {Full_stack.map((image, index) => (
+              <SkillDataProvider
+                key={index}
+                src={image.Image}
+                width={image.width}
+                height={image.height}
+                index={index}
+              />
+            ))}
+          </div>
+        </div>
 
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Full_stack.map((image, index) => (
-          <SkillDataProvider
-            key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
-          />
-        ))}
-      </div>
-
-      <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-        {Other_skill.map((image, index) => (
-          <SkillDataProvider
-            key={index}
-            src={image.Image}
-            width={image.width}
-            height={image.height}
-            index={index}
-          />
-        ))}
-      </div>
-
-      <div className="w-full h-full absolute">
-        <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
-          <video
-            className="w-full h-full"
-            preload="false"
-            playsInline
-            loop
-            muted
-            autoPlay
-            src="/cards-video.webm"
-          />
+        {/* Other Skills */}
+        <div className="flex flex-col h-1/4 items-center justify-center">
+          <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-500 mb-3">
+            Other Skills
+          </h2>
+          <div className="flex flex-row justify-center flex-wrap gap-3 items-center">
+            {Other_skill.map((image, index) => (
+              <SkillDataProvider
+                key={index}
+                src={image.Image}
+                width={image.width}
+                height={image.height}
+                index={index}
+              />
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* <div id="experience" className="flex flex-col items-center justify-center">
-        <h1 className="text-[70px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 mt-20">
-          Experience
-        </h1>
-      </div> */}
+      {/* Background Video */}
+      <div className="absolute inset-0 z-[-10]">
+        <video
+          className="w-full h-full object-cover opacity-30"
+          preload="false"
+          playsInline
+          loop
+          muted
+          autoPlay
+          src="/cards-video.webm"
+        />
+      </div>
     </section>
   );
 };

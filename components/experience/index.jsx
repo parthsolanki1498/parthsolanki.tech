@@ -8,38 +8,37 @@ const data = [
   {
     title: "Ecomtent Ai",
     description:
-      "Working on the Next-Generation HMI Experience without no driving experience.",
+      "Worked as an Intern under Rippen for Ecomtent, an innovative E-commerce platform which helps businesses make a difference in online sale, leveraging AI.",
     speed: 0.5,
+    link: "https://www.ecomtent.ai/",
   },
   {
     title: "Avolta Inc",
     description:
-      "Developed the Future of UFC Sports Ecosystem despite not being a sports fan.",
+      "Yet another Internship which used Machine Learning Algorithm for anti-car theft system. Played my part implementing supervised learning for anamoly detection.",
     speed: 0.5,
+    link: "https://www.avoltacanada.com/"
   },
   {
     title: "Fractal Analytics",
     description:
-      "Defined the visual concept and design language for the Lincoln Zephyr 2022 but never seen it in real life.",
+      "worked on a project that indeed is the first-ever generative AI Sales Platform for Consultive Consumer Experience, helps build AI sales advisors that engage in one-on-one shopping experience with customers.", 
     speed: 0.67,
+    link: "https://fractal.ai/"
   },
   {
     title: "Full Creative",
     description:
-      "I was just one person on a massive team that created an entire Royal Caribbean eco-system.",
+      "Internship prior to my graduation, worked on an in house e-leraning platform",
     speed: 0.8,
+    link: "https://full.io/"
   },
   {
     title: "Civica",
     description:
-      "Designed a 1M+ users product utilizing my best personal experience: sleeping.",
+      "Trainee position prior to graudation, showcasing my skills in the field of software development.",
     speed: 0.8,
-  },
-  {
-    title: "NFL",
-    description:
-      "Explored the Future of Fantasy Football while being in a country where football means a total different sport.",
-    speed: 0.8,
+    link: "https://www.civica.com/"
   },
 ];
 

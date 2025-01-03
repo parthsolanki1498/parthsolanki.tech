@@ -1,5 +1,5 @@
-import React from 'react';
-import HeroContent from '../sub/HeroContent';
+import React from "react";
+import HeroContent from "../sub/HeroContent";
 
 const Hero = () => {
   return (
@@ -12,7 +12,7 @@ const Hero = () => {
         autoPlay
         muted
         loop
-        className="absolute top-[-300px] left-0 h-full w-full object-cover z-[1] rotate-180"
+        className="rotate-180 absolute top-[-300px]  h-full w-full left-0 z-[1] object-cover"
         aria-hidden="true"
       >
         <source src="/blackhole.webm" type="video/webm" />
@@ -20,7 +20,7 @@ const Hero = () => {
         <img
           src="/fallback_blackhole.jpg"
           alt="Blackhole Background"
-          className="h-full w-full object-cover"
+          className="w-full h-full object-cover"
         />
       </video>
 

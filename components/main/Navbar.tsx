@@ -13,15 +13,15 @@ const Navbar = () => {
         {/* Logo Section */}
         <a href="#about-me" className="flex items-center">
           <Image
-            src="/NavLogo.png"
+            src="/earth.webp"
             alt="logo"
-            width={50}
-            height={50}
-            className="cursor-pointer hover:animate-slowspin"
-          />
-          <span className="font-bold ml-2 hidden md:block text-gray-300">
+            width={100}
+            height={100}
+            className="cursor-pointer transition-transform duration-500 ease-in-out hover:rotate-180"
+            />
+          {/* <span className="font-bold ml-2 hidden md:block text-gray-300">
             Parth Solanki
-          </span>
+          </span> */}
         </a>
 
         {/* Desktop Navigation Links */}
@@ -58,13 +58,20 @@ const Navbar = () => {
         {/* Social Media Icons */}
         <div className="hidden md:flex flex-row gap-5">
           {Socials.map((social) => (
-            <Image
-              src={social.src}
-              alt={social.name}
-              key={social.name}
-              width={24}
-              height={24}
-            />
+             <a
+             href={social.link} // URL for the social media
+             key={social.name}
+             target="_blank" // Opens the link in a new tab
+             rel="noopener noreferrer" // Security for external links
+           >
+             <Image
+               src={social.src}
+               alt={social.name}
+               width={24}
+               height={24}
+               className="cursor-pointer" // Optional styling
+             />
+           </a>
           ))}
         </div>
       </div>

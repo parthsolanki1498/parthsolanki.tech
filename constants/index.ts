@@ -82,16 +82,19 @@ export const Skill_data = [
   
   export const Socials = [
     {
-      name: "Discord",
-      src: "/instagram.svg",
+      name: "Github",
+      src: "/github-white-icon.webp",
+      link: "https://github.com/parthsolanki1498",
     },
     {
-      name: "Facebook",
-      src: "/facebook.svg",
+      name: "Leetcode",
+      src: "/leetcode.svg",
+      link: "https://leetcode.com/u/iZnoGouDAf/",
     },
     {
-      name: "Instagram",
-      src: "/discord.svg",
+      name: "LinkedIn",
+      src: "/linkedin-app-white-icon.webp",
+      link: "https://www.linkedin.com/in/parthsolanki1498/",
     },
   ];
   
