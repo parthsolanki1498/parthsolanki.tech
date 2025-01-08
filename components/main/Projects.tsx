@@ -16,7 +16,7 @@ const Projects = () => {
           src="/spotify-to-youtube.png"
           title="Spotify to Youtube Playlist Converter"
           description="Web Applicaiton to migrate your playlist from Spotify to Youtuhbe with ease" 
-          link="https://spotify-to-youtube-pfyalndg4-parth-solankis-projects.vercel.app/  " />
+          link="https://spotify-to-youtube-eta.vercel.app/" />
 
         <ProjectCard
           src="/grt-bus-route.png"
